@@ -2,100 +2,214 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090612">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LucaX Links</title>
+<meta name="theme-color" content="#10091d">
 <style>
-:root{color-scheme:dark;--bg:#090612;--panel:#151025;--panel2:#201637;--text:#f7f2ff;--muted:#b8a9d0;--pink:#ff35c8;--cyan:#31e7ff;--purple:#9b5cff;--line:#3b2858}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#3a1452 0,transparent 36%),radial-gradient(ellipse at 90% 20%,#102e52 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
-.wrap{width:min(1040px,92%);margin:auto;padding:34px 0 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:32px}.brand{font-weight:900;letter-spacing:.5px;font-size:22px}.brand span{color:var(--cyan);text-shadow:0 0 18px #31e7ff88}.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:8px 12px;background:#130d20}
-.layout{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,#1b122bF2,#100d1cf2);border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:0 15px 55px #0005}.profile{text-align:center;grid-column:1/-1;padding:34px 22px 28px;position:relative;overflow:hidden}.profile:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#ff35c81c,#31e7ff12,transparent);pointer-events:none}.avatar{width:88px;height:88px;margin:0 auto 15px;border-radius:26px;display:grid;place-items:center;font-size:30px;font-weight:950;background:linear-gradient(135deg,var(--pink),var(--purple),var(--cyan));color:white;box-shadow:0 0 34px #c23cff66}.profile h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-1px}.profile h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 18px #31e7ff66}.profile p{margin:9px 0 0;color:var(--muted)}
-h2{font-size:17px;margin:0 0 17px}.field{display:grid;gap:7px;margin-bottom:13px}label{font-size:12px;color:var(--muted);font-weight:700}input,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 13px;background:#0d0918;color:var(--text);font:inherit;outline:none}input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #31e7ff18}
-button{border:0;border-radius:12px;padding:12px 15px;font:inherit;font-weight:800;cursor:pointer;color:#100819;background:linear-gradient(100deg,var(--pink),var(--cyan));transition:transform .15s,filter .15s}button:hover{transform:translateY(-1px);filter:brightness(1.08)}button.secondary{color:var(--text);background:#2b2040;border:1px solid var(--line)}button.danger{color:#ffd9e8;background:#472039;border:1px solid #743456}.actions{display:flex;gap:9px;flex-wrap:wrap}.actions button{flex:1}
-.links{display:grid;gap:11px}.link{display:flex;align-items:center;gap:13px;padding:14px;border:1px solid #38264f;background:linear-gradient(100deg,#21152f,#151126);border-radius:15px;transition:.2s}.link:hover{border-color:var(--cyan);transform:translateY(-2px);box-shadow:0 0 22px #31e7ff16}.linkicon{width:43px;height:43px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:20px;font-weight:900;background:#352047;color:white}.linkinfo{min-width:0;flex:1}.linkinfo strong{display:block}.linkinfo small{display:block;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:3px}.link a{color:inherit;text-decoration:none}.linkbuttons{display:flex;gap:6px}.linkbuttons button{padding:8px 10px;font-size:12px}
-.empty{text-align:center;padding:34px 12px;color:var(--muted);border:1px dashed #49345f;border-radius:15px}.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:13px}.footer{text-align:center;color:#89799e;font-size:12px;margin-top:24px}
-@media(max-width:720px){.layout{grid-template-columns:1fr}.profile{grid-column:auto}.wrap{padding-top:22px}.card{padding:18px}.top{margin-bottom:20px}.linkbuttons{flex-direction:column}}
+:root{--bg:#0b0712;--card:#171024;--line:#38264f;--pink:#ff45b5;--cyan:#31e7ff;--text:#f6efff;--muted:#b7a8ca}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#382052 0,transparent 38%),radial-gradient(ellipse at 90% 20%,#123343 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:1050px;margin:auto;padding:34px 20px 50px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:12px}.brand{font-size:25px;font-weight:950;letter-spacing:-1px}.brand span{color:var(--cyan);text-shadow:0 0 16px #31e7ff88}.tag{font-size:11px;letter-spacing:2px;color:var(--cyan);border:1px solid #31e7ff55;padding:8px 12px;border-radius:30px}
+.card{background:linear-gradient(145deg,#1c1429ee,#100c1bee);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 40px #0005}.profile{text-align:center;padding:32px 20px}.avatar{width:82px;height:82px;border-radius:25px;margin:0 auto 14px;display:grid;place-items:center;font-size:27px;font-weight:950;background:linear-gradient(135deg,var(--pink),#784bff,var(--cyan));box-shadow:0 0 30px #d84bff55}h1{font-size:34px;margin:8px 0}h1 em{font-style:normal;color:var(--cyan)}p{color:var(--muted);line-height:1.5;margin:8px 0}.layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}h2{font-size:18px;margin:0 0 18px}.field{margin:13px 0}.field label{display:block;font-size:10px;letter-spacing:1.5px;color:var(--cyan);font-weight:800;margin-bottom:7px}input,select{width:100%;padding:12px 13px;border-radius:11px;border:1px solid #49345f;background:#0d0915;color:var(--text);font:inherit;outline:none}input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #31e7ff18}
+button{border:0;border-radius:11px;padding:12px 15px;font:inherit;font-weight:800;cursor:pointer;color:#100819;background:linear-gradient(100deg,var(--pink),var(--cyan));transition:.15s}button:hover{filter:brightness(1.08);transform:translateY(-1px)}button.secondary{color:var(--text);background:#2b2040;border:1px solid var(--line)}button.danger{color:#ffd9e8;background:#472039;border:1px solid #743456}.wide{width:100%}.links{display:grid;gap:11px}.link{display:flex;align-items:center;gap:13px;padding:14px;border:1px solid #38264f;background:linear-gradient(100deg,#21152f,#151126);border-radius:15px}.linkicon{width:43px;height:43px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:20px;background:#352047}.linkinfo{min-width:0;flex:1}.linkinfo strong{display:block}.linkinfo small{display:block;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:3px}.link a{color:inherit;text-decoration:none}.linkbuttons{display:flex;gap:6px}.linkbuttons button{padding:8px 10px;font-size:12px}.empty{text-align:center;padding:30px 12px;color:var(--muted);border:1px dashed #49345f;border-radius:15px}.note{font-size:12px;color:var(--muted)}.footer{text-align:center;color:#89799e;font-size:12px;margin-top:24px}.hidden{display:none!important}.status{font-size:13px;margin:10px 0;color:var(--cyan);min-height:18px}.adminbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}.public-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.wrap{padding:22px 14px}.card{padding:18px}.top{align-items:flex-start}.linkbuttons{flex-direction:column}h1{font-size:28px}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 <div class="wrap">
-  <header class="top"><div class="brand">✦ LucaX <span>Links</span></div><div class="tag">NEON SOCIAL HUB</div></header>
-  <section class="card profile">
-    <div class="avatar" id="avatar">LX</div>
-    <h1 id="displayName">LucaX <em>Links</em></h1>
-    <p id="displayBio">Alle meine Social-Media-Links an einem Ort.</p>
+<header class="top"><div class="brand">✦ LucaX <span>Links</span></div><div class="tag">NEON SOCIAL HUB</div></header>
+
+<section class="card profile">
+  <div class="avatar" id="avatar">LX</div>
+  <h1 id="displayName">LucaX <em>Links</em></h1>
+  <p id="displayBio">Alle meine Social-Media-Links an einem Ort.</p>
+</section>
+
+<main class="layout">
+  <section class="card" id="publicCard" style="grid-column:1/-1">
+    <div class="adminbar"><h2 style="margin:0">🌐 Meine Social Links</h2><span class="tag" id="count">0 LINKS</span></div>
+    <div class="links" id="links"></div>
+    <div class="empty" id="empty">Hier sind noch keine Links eingetragen.</div>
+    <div class="status" id="publicStatus" role="status"></div>
   </section>
-  <main class="layout" style="margin-top:22px">
-    <section class="card">
-      <h2>⚡ Profil bearbeiten</h2>
-      <div class="field"><label for="name">PROFILNAME</label><input id="name" maxlength="32" value="LucaX"></div>
-      <div class="field"><label for="bio">BESCHREIBUNG</label><input id="bio" maxlength="100" value="Alle meine Social-Media-Links an einem Ort."></div>
-      <div class="field"><label for="initials">AVATAR-KÜRZEL</label><input id="initials" maxlength="3" value="LX"></div>
-      <button id="saveProfile">Profil speichern</button>
-    </section>
-    <section class="card">
-      <h2>＋ Neuen Link hinzufügen</h2>
-      <form id="linkForm">
-        <div class="field"><label for="platform">PLATTFORM</label>
-          <select id="platform">
-            <option>YouTube</option><option>Twitch</option><option>Snapchat</option><option>TikTok</option><option>Instagram</option><option>Discord</option><option>X</option><option>Website</option><option>Andere</option>
-          </select>
-        </div>
-        <div class="field"><label for="linkTitle">ANZEIGENAME</label><input id="linkTitle" maxlength="36" placeholder="z. B. Mein YouTube-Kanal" required></div>
-        <div class="field"><label for="linkUrl">LINK / URL</label><input id="linkUrl" type="url" placeholder="https://..." required></div>
-        <button type="submit" style="width:100%">＋ Link hinzufügen</button>
-      </form>
-      <p class="note">Tipp: Füge immer den vollständigen Link inklusive https:// ein.</p>
-    </section>
-    <section class="card" style="grid-column:1/-1">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px">
-        <h2 style="margin:0">🌐 Meine Social Links</h2><span class="tag" id="count">0 LINKS</span>
+
+  <section class="card" id="loginCard" style="grid-column:1/-1">
+    <h2>🔐 Admin-Login</h2>
+    <p>Nur der angemeldete Administrator kann Profil und Links bearbeiten.</p>
+    <form id="loginForm">
+      <div class="field"><label for="password">DEIN WEBSITE-ADMIN-PASSWORT</label><input id="password" type="password" autocomplete="current-password" required></div>
+      <button class="wide" type="submit">Einloggen</button>
+    </form>
+    <div class="status" id="loginStatus" role="status"></div>
+  </section>
+
+  <section class="card hidden" id="adminPanel">
+    <div class="adminbar"><h2 style="margin:0">⚡ Profil bearbeiten</h2><button class="secondary" id="logoutBtn">Abmelden</button></div>
+    <div class="field"><label for="name">PROFILNAME</label><input id="name" maxlength="32"></div>
+    <div class="field"><label for="bio">BESCHREIBUNG</label><input id="bio" maxlength="120"></div>
+    <div class="field"><label for="initials">AVATAR-KÜRZEL</label><input id="initials" maxlength="3"></div>
+    <button class="wide" id="saveProfile">Profil speichern</button>
+    <div class="status" id="profileStatus" role="status"></div>
+  </section>
+
+  <section class="card hidden" id="addPanel">
+    <h2>＋ Neuen Link hinzufügen</h2>
+    <form id="linkForm">
+      <div class="field"><label for="platform">PLATTFORM</label>
+        <select id="platform"><option>YouTube</option><option>Twitch</option><option>Snapchat</option><option>TikTok</option><option>Instagram</option><option>Discord</option><option>X</option><option>Website</option><option>Andere</option></select>
       </div>
-      <div class="links" id="links"></div>
-      <div class="empty" id="empty">Hier sind noch keine Links.<br>Füge oben deinen ersten Social-Media-Link hinzu. ✨</div>
-    </section>
-    <section class="card" style="grid-column:1/-1">
-      <h2>🚀 Teilen & sichern</h2>
-      <div class="actions"><button id="share">Meinen Profil-Link kopieren</button><button class="secondary" id="export">Backup herunterladen</button><button class="secondary" id="importBtn">Backup importieren</button><input id="importFile" type="file" accept="application/json" hidden></div>
-      <p class="note">Deine Änderungen werden automatisch in diesem Browser gespeichert. Mit „Profil-Link kopieren“ wird ein teilbarer Link mit deinen aktuellen Profildaten erstellt. Damit andere ihn online öffnen können, musst du diese Website zuerst veröffentlichen (hosten). Das Backup kannst du zum Übertragen deiner Links verwenden.</p>
-    </section>
-  </main>
-  <div class="footer">LucaX Links · Deine Profile. Ein Platz. ✦</div>
+      <div class="field"><label for="linkTitle">ANZEIGENAME</label><input id="linkTitle" maxlength="50" placeholder="z. B. Mein YouTube-Kanal" required></div>
+      <div class="field"><label for="linkUrl">LINK / URL</label><input id="linkUrl" type="url" placeholder="https://..." required></div>
+      <button class="wide" type="submit">Link hinzufügen</button>
+    </form>
+    <div class="status" id="linkStatus" role="status"></div>
+  </section>
+</main>
+<div class="footer">LucaX Links · Deine Profile. Ein Platz. ✦</div>
 </div>
+
 <script>
-const $=id=>document.getElementById(id);
-const icons={YouTube:"▶",Twitch:"▣",Snapchat:"👻",TikTok:"♪",Instagram:"◎",Discord:"◉",X:"𝕏",Website:"🌐",Andere:"✦"};
-let data={name:"LucaX",bio:"Alle meine Social-Media-Links an einem Ort.",initials:"LX",links:[]};
-function safeUrl(raw){try{const u=new URL(raw);return ["http:","https:"].includes(u.protocol)?u.href:null}catch{return null}}
-function save(){localStorage.setItem("lucax-links-v1",JSON.stringify(data));render()}
-function render(){
- $("displayName").innerHTML=`${escapeHtml(data.name)} <em>Links</em>`;$("displayBio").textContent=data.bio;$("avatar").textContent=data.initials||"LX";
- $("name").value=data.name;$("bio").value=data.bio;$("initials").value=data.initials;
- $("count").textContent=`${data.links.length} LINK${data.links.length===1?"":"S"}`;
- $("links").innerHTML="";$("empty").style.display=data.links.length?"none":"block";
- data.links.forEach((item,index)=>{
-  const row=document.createElement("div");row.className="link";
-  const icon=document.createElement("div");icon.className="linkicon";icon.textContent=icons[item.platform]||"✦";
-  const info=document.createElement("div");info.className="linkinfo";
-  const a=document.createElement("a");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title;
-  const small=document.createElement("small");small.textContent=item.platform+" · "+item.url;
-  info.append(a,small);
-  const controls=document.createElement("div");controls.className="linkbuttons";
-  const copy=document.createElement("button");copy.className="secondary";copy.textContent="Kopieren";copy.onclick=()=>copyText(item.url);
-  const del=document.createElement("button");del.className="danger";del.textContent="Löschen";del.onclick=()=>{data.links.splice(index,1);save()};
-  controls.append(copy,del);row.append(icon,info,controls);$("links").append(row);
- });
-}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-async function copyText(text){try{await navigator.clipboard.writeText(text);alert("Kopiert!")}catch{prompt("Bitte kopieren:",text)}}
-$("saveProfile").onclick=()=>{data.name=$("name").value.trim()||"LucaX";data.bio=$("bio").value.trim();data.initials=$("initials").value.trim().slice(0,3).toUpperCase()||"LX";save()};
-$("linkForm").onsubmit=e=>{e.preventDefault();const url=safeUrl($("linkUrl").value.trim());if(!url){alert("Bitte gib einen gültigen http- oder https-Link ein.");return}data.links.push({platform:$("platform").value,title:$("linkTitle").value.trim(),url});$("linkTitle").value="";$("linkUrl").value="";save()};
-$("share").onclick=()=>{const payload=btoa(unescape(encodeURIComponent(JSON.stringify(data))));const shareUrl=location.href.split("#")[0]+"#profile="+payload;copyText(shareUrl)};
-$("export").onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="lucax-links-backup.json";a.click();URL.revokeObjectURL(a.href)};
-$("importBtn").onclick=()=>$("importFile").click();
-$("importFile").onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const obj=JSON.parse(await file.text());if(!obj||!Array.isArray(obj.links))throw Error();data={name:String(obj.name||"LucaX"),bio:String(obj.bio||""),initials:String(obj.initials||"LX"),links:obj.links.filter(x=>x&&safeUrl(x.url)).map(x=>({platform:String(x.platform||"Andere"),title:String(x.title||"Mein Link"),url:safeUrl(x.url)}))};save();alert("Backup importiert!")}catch{alert("Diese Backup-Datei ist ungültig.")}e.target.value=""};
-try{const saved=localStorage.getItem("lucax-links-v1");if(saved)data={...data,...JSON.parse(saved)};if(location.hash.startsWith("#profile=")){const decoded=JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(9)))));if(decoded&&Array.isArray(decoded.links)){data={name:String(decoded.name||"LucaX"),bio:String(decoded.bio||""),initials:String(decoded.initials||"LX"),links:decoded.links.filter(x=>x&&safeUrl(x.url)).map(x=>({platform:String(x.platform||"Andere"),title:String(x.title||"Mein Link"),url:safeUrl(x.url)}))};save()}}}catch{}
-render();
+(() => {
+  // Öffentliche Verbindungsdaten. Das Admin-Passwort und der Service-Role-Key
+  // stehen NICHT in dieser Datei, sondern ausschließlich als Edge-Function-Secrets.
+  const SUPABASE_URL = "https://myrqxpdkngmujpcnbdbo.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_kl-2Yt6bXOPpkjjCxCw-rQ_wo_dEfDc";
+  const ADMIN_FUNCTION_URL = SUPABASE_URL + "/functions/v1/lucax-admin";
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+  const $ = id => document.getElementById(id);
+  const icons = {YouTube:"▶",Twitch:"▣",Snapchat:"👻",TikTok:"♪",Instagram:"◎",Discord:"◉",X:"𝕏",Website:"🌐",Andere:"✦"};
+  let profile = {id:1,name:"LucaX",bio:"Alle meine Social-Media-Links an einem Ort.",initials:"LX"};
+  let links = [];
+  let isAdmin = false;
+  let adminToken = sessionStorage.getItem("lucax_admin_token") || "";
+
+  function setStatus(id, message, error=false) {
+    const el=$(id); el.textContent=message; el.style.color=error?"#ff8dbd":"#31e7ff";
+  }
+  function safeUrl(raw) {
+    try { const u=new URL(raw); return ["http:","https:"].includes(u.protocol)?u.href:null; }
+    catch { return null; }
+  }
+  function escapeHtml(s) {
+    return String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+  async function adminRequest(action, data={}) {
+    const response = await fetch(ADMIN_FUNCTION_URL, {
+      method:"POST",
+      headers:{"Content-Type":"application/json","apikey":SUPABASE_PUBLISHABLE_KEY, ...(adminToken ? {"Authorization":"Bearer "+adminToken} : {})},
+      body:JSON.stringify({action,...data})
+    });
+    const result = await response.json().catch(()=>({error:"Server hat keine gültige Antwort gesendet."}));
+    if(!response.ok) throw new Error(result.error || "Admin-Aktion fehlgeschlagen.");
+    return result;
+  }
+  function render() {
+    $("displayName").innerHTML=escapeHtml(profile.name)+" <em>Links</em>";
+    $("displayBio").textContent=profile.bio || "";
+    $("avatar").textContent=profile.initials || "LX";
+    $("count").textContent=`${links.length} LINK${links.length===1?"":"S"}`;
+    $("links").replaceChildren();
+    $("empty").classList.toggle("hidden",links.length>0);
+    links.forEach(item=>{
+      const row=document.createElement("div"); row.className="link";
+      const icon=document.createElement("div"); icon.className="linkicon"; icon.textContent=icons[item.platform]||"✦";
+      const info=document.createElement("div"); info.className="linkinfo";
+      const a=document.createElement("a"); a.href=item.url; a.target="_blank"; a.rel="noopener noreferrer"; a.textContent=item.title || item.platform;
+      const small=document.createElement("small"); small.textContent=(item.platform||"Link")+" · "+item.url;
+      info.append(a,small); row.append(icon,info);
+      if(isAdmin) {
+        const controls=document.createElement("div"); controls.className="linkbuttons";
+        const del=document.createElement("button"); del.className="danger"; del.textContent="Löschen";
+        del.addEventListener("click",()=>deleteLink(item.id));
+        controls.append(del); row.append(controls);
+      }
+      $("links").append(row);
+    });
+    $("loginCard").classList.toggle("hidden",isAdmin);
+    $("adminPanel").classList.toggle("hidden",!isAdmin);
+    $("addPanel").classList.toggle("hidden",!isAdmin);
+    if(isAdmin) {
+      $("name").value=profile.name||"";
+      $("bio").value=profile.bio||"";
+      $("initials").value=profile.initials||"LX";
+    }
+  }
+  async function loadData() {
+    setStatus("publicStatus","Lade Profil …");
+    const p=await supabase.from("site_profile").select("*").eq("id",1).maybeSingle();
+    if(p.error) { setStatus("publicStatus","Profil konnte nicht geladen werden: "+p.error.message,true); return; }
+    if(p.data) profile={...profile,...p.data};
+    const l=await supabase.from("social_links").select("*").order("id",{ascending:true});
+    if(l.error) { setStatus("publicStatus","Links konnten nicht geladen werden: "+l.error.message,true); return; }
+    links=(l.data||[]).map(x=>({...x,url:safeUrl(x.url)})).filter(x=>x.url);
+    render(); setStatus("publicStatus","");
+  }
+  async function checkAdminSession() {
+    if(!adminToken) { isAdmin=false; render(); return; }
+    try {
+      await adminRequest("check");
+      isAdmin=true;
+    } catch {
+      adminToken="";
+      sessionStorage.removeItem("lucax_admin_token");
+      isAdmin=false;
+    }
+    render();
+  }
+  $("loginForm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    setStatus("loginStatus","Anmeldung läuft …");
+    try {
+      const result=await adminRequest("login",{password:$("password").value});
+      adminToken=result.token;
+      sessionStorage.setItem("lucax_admin_token",adminToken);
+      $("password").value="";
+      isAdmin=true;
+      setStatus("loginStatus","Erfolgreich angemeldet.");
+      await loadData();
+      render();
+    } catch(error) {
+      setStatus("loginStatus","Login fehlgeschlagen: "+error.message,true);
+    }
+  });
+  $("logoutBtn").addEventListener("click",()=>{
+    adminToken="";
+    sessionStorage.removeItem("lucax_admin_token");
+    isAdmin=false;
+    render();
+    setStatus("loginStatus","Du wurdest abgemeldet.");
+  });
+  $("saveProfile").addEventListener("click",async()=>{
+    const updated={id:1,name:$("name").value.trim()||"LucaX",bio:$("bio").value.trim(),initials:$("initials").value.trim().slice(0,3).toUpperCase()||"LX"};
+    setStatus("profileStatus","Speichere …");
+    try {
+      await adminRequest("save_profile",{profile:updated});
+      profile={...profile,...updated}; render(); setStatus("profileStatus","Profil gespeichert!");
+    } catch(error) { setStatus("profileStatus","Speichern fehlgeschlagen: "+error.message,true); }
+  });
+  $("linkForm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const url=safeUrl($("linkUrl").value.trim());
+    if(!url) { setStatus("linkStatus","Bitte einen gültigen http- oder https-Link eingeben.",true); return; }
+    setStatus("linkStatus","Füge Link hinzu …");
+    const item={platform:$("platform").value,title:$("linkTitle").value.trim(),url};
+    try {
+      const result=await adminRequest("add_link",{link:item});
+      links.push(result.link);
+      $("linkTitle").value=""; $("linkUrl").value="";
+      render(); setStatus("linkStatus","Link hinzugefügt!");
+    } catch(error) { setStatus("linkStatus","Hinzufügen fehlgeschlagen: "+error.message,true); }
+  });
+  async function deleteLink(id) {
+    if(!confirm("Diesen Link wirklich löschen?")) return;
+    try {
+      await adminRequest("delete_link",{id});
+      links=links.filter(x=>String(x.id)!==String(id)); render();
+    } catch(error) { alert("Löschen fehlgeschlagen: "+error.message); }
+  }
+  (async()=>{await checkAdminSession();await loadData();})();
+})();
 </script>
 </body>
 </html>
